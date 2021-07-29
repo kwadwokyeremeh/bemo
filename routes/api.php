@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\ColumnController;
+use App\Http\Controllers\ExportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,4 +36,4 @@ Route::post('cards', [CardController::class, 'store']);
 Route::patch('cards', [CardController::class, 'update']);
 
 // Download Dump
-//Route::get('download-db-dump', [DownloadsController::class, 'getDbDump']);
+Route::get('download-db-dump', [ExportController::class, 'export']);
